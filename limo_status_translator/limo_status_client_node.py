@@ -10,7 +10,7 @@ def get_status():
     	rospy.init_node('client', anonymous=True)
 	sub = rospy.Subscriber('status_from_translator', String, callback)
 	pub = rospy.Publisher('status_received', String, queue_size=1)
-    	rate = rospy.Rate(5) # 10hz
+    	rate = rospy.Rate(10) # 10hz
 
     	while not rospy.is_shutdown():
 			for get_status in range(0,5):
