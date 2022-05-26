@@ -106,6 +106,7 @@ catkin_package(
 #  LIBRARIES limo_status_translator
 #  CATKIN_DEPENDS message_generation roscpp rospy std_msgs
 #  DEPENDS system_lib
+#  DEPENDS message_runtime
 )
 
 ###########
