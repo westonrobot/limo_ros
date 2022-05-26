@@ -1,0 +1,12 @@
+# Possible values for get_status
+uint8 GET_STATUS_VEHICLE_STATE = 0
+uint8 GET_STATUS_CONTROL_MODE = 1
+uint8 GET_STATUS_BATTERY_VOLTAGE = 2
+uint8 GET_STATUS_ERROR_CODE = 3
+uint8 GET_STATUS_MOTION_MODE = 4
+
+# request
+uint8 get_status
+---
+# response
+string status_string
