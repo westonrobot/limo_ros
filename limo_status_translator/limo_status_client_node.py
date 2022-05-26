@@ -9,8 +9,8 @@ def callback(data):
 def get_status():
     	rospy.init_node('limo_status_client_node', anonymous=True)
 	sub = rospy.Subscriber('status_from_translator', String, callback)
-	pub = rospy.Publisher('status_received', String, queue_size=1)
-    	rate = rospy.Rate(10) # 10hz
+	pub = rospy.Publisher('status_received', String, queue_size=0)
+    	rate = rospy.Rate(1)
 
     	while not rospy.is_shutdown():
 			for get_status in range(0,5):
