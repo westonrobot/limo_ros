@@ -4,7 +4,7 @@ import rospy
 from std_msgs.msg import String
 
 def callback(data):
-	rospy.loginfo(rospy.get_caller_id() + "%s", data.data)
+	rospy.loginfo("%s", data.data)
 
 def get_status():
     	rospy.init_node('limo_status_client_node', anonymous=True)
