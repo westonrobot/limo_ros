@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
-import rospy, random
-from limo_status_client.srv import *
+#!/usr/bin/env python
+import rospy
+from limo_status_translator.srv import *
 
 if __name__ == "__main__":
     rospy.init_node('client')
@@ -13,16 +13,17 @@ if __name__ == "__main__":
         for x in range(0, 5):
             # print(req)
             req.get_status = x
-        rospy.loginfo("Generated [%d, %d], sending addition request..." % (a, b))
+            rospy.loginfo("Generated [%d], sending addition request..." % (x))
+            resp = abc_client(req)
+            rospy.loginfo("HIIIIReceived response: %s" % resp.status_string)
+
 
         
         
         # req.second = b
 
-        resp = abc_client(req)
 
         # resp = calc_client(a, b)
 
-        rospy.loginfo("Received response: %d" % resp.status_string)
 
         r.sleep()

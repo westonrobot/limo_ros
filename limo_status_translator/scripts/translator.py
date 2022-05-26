@@ -3,6 +3,7 @@
 import rospy
 from std_msgs.msg import String
 from limo_status_translator.srv import *
+from limo_status_translator.msg import *
 
 def callback(req):
     hello_str = "Hi, I am" + str(req.get_status)
