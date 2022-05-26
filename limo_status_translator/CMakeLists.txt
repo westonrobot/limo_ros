@@ -113,7 +113,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
 # include
-# ${catkin_INCLUDE_DIRS}
+#  ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -200,3 +200,9 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+catkin_install_python(PROGRAMS limo_status_client_node.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+
