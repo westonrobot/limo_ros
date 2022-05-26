@@ -8,10 +8,10 @@ project(limo_status_translator)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  message_generation
   roscpp
   rospy
-  std_msgs
+  std_msgs	
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -54,12 +54,13 @@ find_package(catkin REQUIRED COMPONENTS
 #   Message2.msg
 # )
 
+
+
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+ add_service_files(
+  FILES
+  GetLimoStatus.srv
+ )
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -119,6 +120,7 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+
 )
 
 ## Declare a C++ library
@@ -205,3 +207,5 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+
