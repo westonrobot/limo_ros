@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 from limo_status_translator.srv import *
-import String
+from std_msgs.msg import String
 
 if __name__ == "__main__":
     rospy.init_node('limo_status_client_node', anonymous=True)
