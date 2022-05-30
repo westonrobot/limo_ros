@@ -47,11 +47,11 @@ def talker():
     msg = LimoStatus()
 
     while not rospy.is_shutdown():
-        msg.vehicle_state = 0
-        msg.control_mode = 0
+        msg.vehicle_state = 0x01
+        msg.control_mode = 1
         msg.battery_voltage = 9
-        msg.error_code = 0
-        msg.control_mode = 0
+        msg.error_code = 4
+        msg.control_mode = 1
         pub.publish(msg)
         rate.sleep()
 
