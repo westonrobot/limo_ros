@@ -48,10 +48,10 @@ def talker():
 
     while not rospy.is_shutdown():
         msg.vehicle_state = 0x01
-        msg.control_mode = 1
-        msg.battery_voltage = 9
+        msg.control_mode = 0x00
+        msg.battery_voltage = 5
         msg.error_code = 4
-        msg.control_mode = 1
+        msg.motion_mode = 1
         pub.publish(msg)
         rate.sleep()
 
